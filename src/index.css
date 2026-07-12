@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply antialiased; }
+  * { @apply border-gray-200 dark:border-gray-700; }
+}
+
+@layer components {
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-track { @apply bg-gray-100 rounded-full; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full hover:bg-gray-400; }
+}
+
+@layer utilities {
+  .text-gradient { @apply bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent; }
+}
+
+div[class*="bg-primary"] { transition: all 0.2s ease-out; }
+html { scroll-behavior: smooth; }
+tbody tr { transition: background-color 0.15s ease; }
+[class*="rounded-2xl"] { transition: box-shadow 0.25s ease, transform 0.25s ease; }
+[class*="rounded-2xl"]:hover { transform: translateY(-1px); }
+.progress-bar { animation: progress-animation 1s ease-out forwards; }
+@keyframes progress-animation { from { width: 0%; } }
+[class*="rounded-t-sm"] { transition: all 0.2s ease; }
+nav button { transition: all 0.2s ease; }
+input:focus { outline: none; }
+circle { transition: stroke-offset 0.5s ease-out; }
