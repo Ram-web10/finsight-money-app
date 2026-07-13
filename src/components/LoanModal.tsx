@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { X, DollarSign, Calendar, User, FileText, Loader2, Clock, CheckCircle2 } from 'lucide-react';
-import { supabase, Loan, LoanType, LoanStatus } from '../lib/supabase';
+import { supabase, Loan, LoanType, LoanStatus, currencies } from '../lib/supabase';
 import { useAuth } from '../context/AuthContext';
 
 type LoanModalProps = {
